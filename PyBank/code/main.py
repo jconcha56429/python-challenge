@@ -1,12 +1,14 @@
 # module import
 import os
 import csv
+print(os.getcwd())
 # set path 
-file = "OneDrive/Desktop/python-challenge/PyBank/Resources/budget_data.csv"
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+csvpath = os.path.join("..", "Resources", "budget_data.csv")
 # list for data 
 Date=[]
 profitloss=[]
-with open(file, newline="") as csvfile:
+with open(csvpath, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
     for row in csvreader:
         # add dates to list
@@ -15,6 +17,8 @@ with open(file, newline="") as csvfile:
         
         # add profit loss to list 
         profitloss.append(row[1])
+
+        
         
 #finishing touches
 datelength = len(Date)
