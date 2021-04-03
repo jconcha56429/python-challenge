@@ -2,7 +2,7 @@
 import os
 import csv
 import pandas as pd 
-print(os.getcwd())
+import numpy as np
 # set path 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
 csvpath = os.path.join("..", "Resources", "budget_data.csv")
@@ -37,4 +37,8 @@ minimum = min(change)
 maximum = max(change)
 print(minimum)
 print(maximum)
+
+
+
+# print(maximum)
 
