@@ -25,6 +25,7 @@ datelength = len(NewDate)
 print(f"Total Months: {datelength}")
 # Present sum of profitloss
 total = sum(profitloss)
-print(total)
+print(f"Total profit/loss: {total}")
 
-
+change = [j-i for i, j in zip(profitloss[:-1], profitloss[1:])] 
+print(change)
