@@ -20,12 +20,14 @@ with open(csvpath, newline="") as csvfile:
        
 #finishing touches
 # Present total number of months
-NewDate = Date[1:]
-datelength = len(NewDate)
+datelength = len(Date)
 print(f"Total Months: {datelength}")
 # Present sum of profitloss
 total = sum(profitloss)
 print(f"Total profit/loss: {total}")
-
+# determine values from one row of profit loss to the next
 change = [j-i for i, j in zip(profitloss[:-1], profitloss[1:])] 
-print(change)
+# print(change
+averagechange = sum(change) / len(change)
+rounded = round(averagechange,2)
+print(f"Average profit/loss change: {rounded}")
