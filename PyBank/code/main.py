@@ -1,6 +1,7 @@
 # module import
 import os
 import csv
+import pandas as pd 
 print(os.getcwd())
 # set path 
 os.chdir(os.path.dirname(os.path.abspath(__file__)))
@@ -24,10 +25,16 @@ datelength = len(Date)
 print(f"Total Months: {datelength}")
 # Present sum of profitloss
 total = sum(profitloss)
-print(f"Total profit/loss: {total}")
+print(f"Total profit/loss: ${total}")
 # determine values from one row of profit loss to the next
 change = [j-i for i, j in zip(profitloss[:-1], profitloss[1:])] 
-# print(change
+# Prseent average change from one period to another
 averagechange = sum(change) / len(change)
 rounded = round(averagechange,2)
-print(f"Average profit/loss change: {rounded}")
+print(f"Average profit/loss change: ${rounded}")
+
+minimum = min(change)
+maximum = max(change)
+print(minimum)
+print(maximum)
+
