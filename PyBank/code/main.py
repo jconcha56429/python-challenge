@@ -45,7 +45,8 @@ index2 = change.index(1926159) #find index 24 + 1 in changes to be the maximum c
 str(print(f"Greatest increase in profits: {Date[25]} ${maximum}"))
 str(print(f"Greatest decrease in profits: {Date[44]} ${minimum}"))
 
-results = ((str(f"Total Months: {datelength}")),(f"Total profit/loss: ${total}"))
+results = ("Finanical Analysis\n""-------------------------\n"f"Total Months: {datelength}\n"f"Total profit/loss: ${total}\n"f"Average profit/loss change: ${rounded}\n"
+f"Greatest increase in profits: {Date[25]} ${maximum}\n"f"Greatest decrease in profits: {Date[44]} ${minimum}")
 
 results_output=os.path.join("PyBank_results.txt")
 with open(results_output,"w") as txt_file:
