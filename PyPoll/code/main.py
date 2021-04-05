@@ -16,3 +16,8 @@ with open(csvpath, newline="") as csvfile:
     next(csvreader)
     for row in csvreader:
         id.append(row[0])
+        county.append(row[1])
+        candidate.append(row[2])
+
+# Final product
+print(f"Total Number of Votes: {totalvotes}")
